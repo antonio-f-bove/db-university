@@ -19,3 +19,23 @@ GROUP BY `exam_id`;
 SELECT `department_id`, COUNT(*)
 FROM `degrees`
 GROUP BY `department_id`;
+
+--------------------------------------------------------------
+
+JOIN
+
+1.
+SELECT `degrees`.`name` AS `deg_name`, `students`.*
+FROM `students`
+INNER JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
+
+2.
+SELECT `departments`.`name` AS `dep_name`, `degrees`.*
+FROM `degrees`
+INNER JOIN `departments` 
+ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`name` = 'Dipartimento di Neuroscienze';
+
+3.
