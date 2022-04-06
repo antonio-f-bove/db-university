@@ -1,0 +1,6 @@
+GROUP BY
+
+1. 
+SELECT YEAR(`students`.`enrolment_date`) AS `year`, COUNT(*) 
+FROM `students`
+GROUP BY YEAR(`enrolment_date`);
